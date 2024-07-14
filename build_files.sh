@@ -1,6 +1,11 @@
 
 # Build the project
 echo "Building the project..."
+python -m ensurepip --upgrade
+pip install --upgrade pip
+
+# Install the requirements
+pip install --target . --upgrade -r /vercel/path0/requirements.txt
 python3.9 -m pip install -r requirements.txt
 
 echo "Make Migration..."
