@@ -6,7 +6,8 @@ echo "Building the project..."
 # Ensure pip is available and upgrade it
 python3 -m ensurepip --upgrade
 python3 -m pip install --upgrade pip
-python3 -m pip install numpy
+python3 -m pip install numpy==1.23.4 -t /vercel/path0/util
+
 # Install the requirements
 python3 -m pip install --target . --upgrade -r /vercel/path0/requirements.txt
 
