@@ -1,18 +1,18 @@
+import sys
+sys.path.insert(0, '/vercel/path0/util')
 
-from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
+
 class LWGMKNN():
     def __init__(self, n_neighbors=9):
         self.n_neighbors = n_neighbors
-        self.model = KNeighborsClassifier(n_neighbors=n_neighbors)
-    
+        
     def fit(self, X, y):
         self.model.fit(X, y)
         #print(self.model._fit_X.dtypes)
         return self
     
     def predict(self, X):
-        predictions = []
         for row_data in X:
             distances_0 = []
             distances_1 = []
@@ -35,9 +35,9 @@ class LWGMKNN():
 
             # Make prediction based on minimum weighted distance average
             pc = 0 if p_0 > p_1 else 1
-            predictions.append(pc)
+            predictions=pc
 
-        return np.array(predictions)
+        return predictions
 
     
     def score(self, X, y):
