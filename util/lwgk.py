@@ -1,4 +1,5 @@
-
+import sys
+sys.path.insert(0, '/vercel/path0/util')
 
 import numpy as np
 
