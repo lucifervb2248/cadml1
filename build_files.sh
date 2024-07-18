@@ -16,8 +16,7 @@ python3.9 -m pip install -r /vercel/path0/requirements.txt
 
 # Database migrations
 echo "Make Migration..."
-python3.9 /vercel/path0/manage.py makemigrations --noinput
-python3.9 /vercel/path0/manage.py migrate --noinput
+
 
 # Collect static files
 echo "Collect Static..."
