@@ -4,7 +4,7 @@ from django.template import loader
 #from .models import LWGMKNN
 import joblib
 import pandas as pd
-from util.lwgk import LWGMKNN
+from lw import LWGMKNN
 from django.template import Template, Context
 import numpy as np
 from django.contrib.sessions.models import Session
