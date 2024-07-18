@@ -2,7 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-from util.lwgk import LWGMKNN
+from cdss.lw import LWGMKNN
 from sklearn.metrics.pairwise import euclidean_distances
 
 
